@@ -75,7 +75,7 @@ public class ControlFlowExercises {
             } else if (grade <= 79 && grade >= 70) {
                 System.out.println("You made a: C");
             } else if (grade <= 69 && grade >= 0) {
-                System.out.println("You failed plz try again");
+                System.out.println("You failed, study harder");
             } else {
                 System.out.println("This is not a valid grade.");
             }
