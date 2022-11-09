@@ -19,7 +19,8 @@ public class ConsoleExercises {
         System.out.println("Please enter a sentence:");
 //		String sentence = myScanner.next();
         String sentence = myScanner.nextLine();
-        System.out.print("This is a lovely sentence: " + sentence);
+        System.out.print("This is a lovely sentence: " + sentence +"\n");
+        System.out.println("Press return to continue");
         myScanner.nextLine();
 
         System.out.println("Please enter the length of the room:");
