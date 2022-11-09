@@ -81,21 +81,20 @@ public class ControlFlowExercises {
             }
             System.out.println();
 
-            System.out.println("Would you like to continue? Please answer \"yes\" or \"no\"");
+            System.out.println("Would you like to check another grade? Please input yes or no");
             String uContinue = uScan.nextLine().trim();
 
             while (!uContinue.equalsIgnoreCase("yes") && !uContinue.equalsIgnoreCase("no")) {
                 uContinue = uScan.nextLine().trim();
             }
             if (uContinue.equalsIgnoreCase("yes")) {
-                System.out.println("You have chosen to continue.");
+                System.out.println("You have chosen to check another grade.");
                 System.out.println();
             } else {
-                System.out.println("You have chosen not to continue.");
+                System.out.println("Goodbye");
                 break;
             }
         }
-
 
     }
 }
