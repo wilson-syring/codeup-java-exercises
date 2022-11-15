@@ -18,8 +18,8 @@ public class Person {
 
     public static void main(String[] args) {
         Person wilson = new Person("Wilson");
-        System.out.println("wilson.getName() = " + wilson.getName());
         wilson.setName("Wilson");
+        System.out.println("wilson.getName() = " + wilson.getName());
         wilson.sayHello();
 
 
