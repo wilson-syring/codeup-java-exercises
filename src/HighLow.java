@@ -1,17 +1,23 @@
+import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 public class HighLow {
     public static void guess() {
+        Random random = new Random();
+        int rand = 0;
+        while (true){
+            rand = random.nextInt(100);
+            if(rand !=0) break;
+        }
         while (true) {
             Scanner guessScan = new Scanner(System.in);
             System.out.println("Choose between 1 and 100");
             String guess = guessScan.nextLine();
-            int random = ThreadLocalRandom.current().nextInt(1, 100 + 1);
             int number = Integer.parseInt(guess);
-            if (number < random){
+            if (number < rand){
                 System.out.println("That's too low, Joe");
-            } else if (number > random) {
+            } else if (number > rand) {
                 System.out.println("That's too high, Guy");
             }else{
                 System.out.println("Right on target, Margret");
