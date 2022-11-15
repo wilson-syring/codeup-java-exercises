@@ -5,7 +5,7 @@ public class HighLow {
     public static void guess() {
         while (true) {
             Scanner guessScan = new Scanner(System.in);
-            System.out.println("Make your guess");
+            System.out.println("Choose between 1 and 100");
             String guess = guessScan.nextLine();
             int random = ThreadLocalRandom.current().nextInt(1, 100 + 1);
             int number = Integer.parseInt(guess);
