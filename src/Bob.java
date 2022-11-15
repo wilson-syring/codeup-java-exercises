@@ -9,7 +9,6 @@ public class Bob {
             System.out.print("Give Bob some info: ");
             String userResponse = bobScan.nextLine().trim();
 
-
             if (userResponse.endsWith("?")) {
                 System.out.println("Awe man, fine!");
             } else if (userResponse.endsWith("!")) {
