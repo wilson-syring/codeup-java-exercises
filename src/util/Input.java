@@ -57,6 +57,15 @@ public class Input {
         }
         return number;
     }
+    public double getDouble(){
+        if(this.scanner.hasNextDouble()){
+            double myDouble = this.scanner.nextDouble();
+            this.scanner.nextLine();
+            return myDouble;
+        }else{
+            return Double.MIN_VALUE;
+        }
+    }
 
 //public static void main(String[] args){
 //        Scanner myScanner = new Scanner(System.in);
