@@ -8,15 +8,19 @@ public class Input {
         this.scanner = scan;
     }
 
-    public String getString(){
-        return this.scanner.nextLine();
+    public String getString(String string){
+        System.out.println("your string: " + string);
+        return string;
     }
 
     public boolean yesNo(String answer){
+        System.out.println("enter yes/no or y/n");
         String resp = this.scanner.nextLine();
         if(resp.equalsIgnoreCase("y")||resp.equalsIgnoreCase("yes")){
+            System.out.println("you entered = " + resp);
             return true;
         } else if (resp.equalsIgnoreCase("n")||resp.equalsIgnoreCase("no")) {
+            System.out.println("you entered = " + resp);
             return false;
         }else return false;
     }
@@ -67,8 +71,5 @@ public class Input {
         }
     }
 
-//public static void main(String[] args){
-//        Scanner myScanner = new Scanner(System.in);
-//        Input something = new Input(myScanner);
-//    }
+
 }
