@@ -1,4 +1,5 @@
 package util;
+
 import java.util.Scanner;
 
 public class Input {
@@ -8,28 +9,32 @@ public class Input {
         this.scanner = scan;
     }
 
-    public String getString(String string){
+    public String getString(String string) {
         System.out.println("your string: " + string);
         return string;
     }
 
-    public boolean yesNo(String answer){
+    public boolean yesNo() {
         System.out.println("enter yes/no or y/n");
         String resp = this.scanner.nextLine();
-        if(resp.equalsIgnoreCase("y")||resp.equalsIgnoreCase("yes")){
+        while (!resp.equalsIgnoreCase("yes") && !resp.equalsIgnoreCase("no") && !resp.equalsIgnoreCase("n") && !resp.equalsIgnoreCase("y")) {
+            System.out.println("That is not yes/no or y/n");
+            resp = this.scanner.nextLine().trim();
+        }
+        if (resp.equalsIgnoreCase("y") || resp.equalsIgnoreCase("yes")) {
             System.out.println("you entered = " + resp);
             return true;
-        } else if (resp.equalsIgnoreCase("n")||resp.equalsIgnoreCase("no")) {
+        } else if (resp.equalsIgnoreCase("n") || resp.equalsIgnoreCase("no")) {
             System.out.println("you entered = " + resp);
             return false;
-        }else return false;
+        } else return false;
     }
 
 
     public int getInt(int min, int max) {
         boolean exitConditionMet = false;
         int number = Integer.MIN_VALUE;
-        while(!exitConditionMet) {
+        while (!exitConditionMet) {
             System.out.println("Enter a number between " + min + " and " + max + ":");
             number = this.scanner.nextInt();
             this.scanner.nextLine();
@@ -47,7 +52,7 @@ public class Input {
     public double getDouble(double min, double max) {
         boolean exitConditionMet = false;
         double number = Double.MIN_VALUE;
-        while(!exitConditionMet) {
+        while (!exitConditionMet) {
             System.out.println("Enter a number between " + min + " and " + max + ":");
             number = this.scanner.nextDouble();
             this.scanner.nextLine();
@@ -61,12 +66,13 @@ public class Input {
         }
         return number;
     }
-    public double getDouble(){
-        if(this.scanner.hasNextDouble()){
+
+    public double getDouble() {
+        if (this.scanner.hasNextDouble()) {
             double myDouble = this.scanner.nextDouble();
             this.scanner.nextLine();
             return myDouble;
-        }else{
+        } else {
             return Double.MIN_VALUE;
         }
     }

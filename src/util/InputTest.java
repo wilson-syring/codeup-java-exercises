@@ -9,9 +9,6 @@ public class InputTest {
         test.getString("hello");
         test.getInt(1, 100);
         test.getDouble(1.25, 10.25);
-        test.yesNo("y");
-        test.yesNo("n");
-        test.yesNo("yes");
-        test.yesNo("no");
+        test.yesNo();
     }
 }
