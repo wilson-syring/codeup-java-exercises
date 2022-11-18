@@ -9,9 +9,9 @@ public class Input {
         this.scanner = scan;
     }
 
-    public String getString(String string) {
-        System.out.println("your string: " + string);
-        return string;
+    public String getString() {
+        return scanner.nextLine();
+
     }
 
     public boolean yesNo() {
