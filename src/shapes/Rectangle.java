@@ -13,7 +13,7 @@ public class Rectangle {
         return this.length * this.width;
     }
     public double getPerimeter(){
-        return this.length * 2 + this.width * 2;
+        return (this.length * 2) + (this.width * 2);
     }
 
 }
