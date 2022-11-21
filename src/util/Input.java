@@ -48,6 +48,11 @@ public class Input {
         }
         return number;
     }
+    public int getInt (){
+        int number = scanner.nextInt();
+        System.out.println("You entered: "+number);
+        return number;
+    }
 
     public double getDouble(double min, double max) {
         boolean exitConditionMet = false;
