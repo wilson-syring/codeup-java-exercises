@@ -6,8 +6,9 @@ public class Student {
     private String name;
     private ArrayList grade = new ArrayList();
     Student(){}
-    Student(String name) {
+    public Student(String name) {
         this.name = name;
+
     }
     public ArrayList getGrade() {
         return this.grade;
