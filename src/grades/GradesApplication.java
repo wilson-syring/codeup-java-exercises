@@ -12,22 +12,22 @@ public class GradesApplication {
         Student Wilson = new Student("Wilson");
         Student Kenny = new Student("Kenny");
         Student Rick = new Student("Rick");
-
-        Wilson.addGrade(80);
-        Wilson.addGrade(76);
-        Wilson.addGrade(85);
-
-        Kenny.addGrade(99);
-        Kenny.addGrade(98);
-        Kenny.addGrade(99);
-
-        Rick.addGrade(100);
-        Rick.addGrade(100);
-        Rick.addGrade(100);
-
         Students.put("Wilson-Syring", Wilson);
         Students.put("Kenny-Powers", Kenny);
         Students.put("Rick-Sanchez", Rick);
+
+        //grades
+        Wilson.addGrade(80);
+        Wilson.addGrade(76);
+        Wilson.addGrade(85);
+        Kenny.addGrade(99);
+        Kenny.addGrade(98);
+        Kenny.addGrade(99);
+        Rick.addGrade(100);
+        Rick.addGrade(100);
+        Rick.addGrade(100);
+
+
         //application input - output using my first switch case
         Input gradeMe = new Input(new Scanner(System.in));
         System.out.println("<=======================GradeFinder=======================>");
