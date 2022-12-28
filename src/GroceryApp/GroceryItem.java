@@ -4,12 +4,13 @@ public class GroceryItem {
     private String name;
     private String category;
     private int quantity;
-    private static String[] categories = {"Meat", "Produce", "Dairy"};
+    private static String[] categories = {"Meat", "Produce", "Dairy", "Other"};
 
-    public GroceryItem(String category, String name, int quantity) {
-        this.category = category;
+    public GroceryItem(String name, int quantity, String category) {
+
         this.quantity = quantity;
         this.name = name;
+        this.category = category;
     }
 
     public int compare(GroceryItem x) {
@@ -25,7 +26,7 @@ public class GroceryItem {
     }
 
     public String getCata() {
-        return this.category;
+        return category;
     }
 
     public String cartEntry() {

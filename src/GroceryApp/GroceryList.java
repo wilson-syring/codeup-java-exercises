@@ -21,19 +21,20 @@ public class GroceryList {
         ArrayList<GroceryItem> meatList = new ArrayList<>();
         ArrayList<GroceryItem> produceList = new ArrayList<>();
         ArrayList<GroceryItem> dairyList = new ArrayList<>();
-
+        ArrayList<GroceryItem> otherList = new ArrayList<>();
 
         for (GroceryItem item : shoppingCart) {
             switch (item.getCata()) {
                 case "meat" -> meatList.add(item);
                 case "produce" -> produceList.add(item);
                 case "dairy" -> dairyList.add(item);
-
+                case "other" -> otherList.add(item);
             }
         }
         meatList.sort(GroceryItem::compare);
         produceList.sort(GroceryItem::compare);
         dairyList.sort(GroceryItem::compare);
+        otherList.sort(GroceryItem::compare);
 
         StringBuilder sortList = new StringBuilder();
         for (GroceryItem groceryItem : meatList) {
@@ -45,7 +46,9 @@ public class GroceryList {
         for (GroceryItem groceryItem : dairyList) {
             sortList.append(groceryItem.cartEntry()).append("\n");
         }
-
+        for (GroceryItem groceryItem : otherList) {
+            sortList.append(groceryItem.cartEntry()).append("\n");
+        }
         return sortList.toString();
     }
 }
